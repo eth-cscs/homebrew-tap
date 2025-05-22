@@ -1,10 +1,10 @@
 class Manta < Formula
   desc "Another CLI for ALPS"
   homepage "https://github.com/eth-cscs/manta/blob/main/README.md"
-  version "1.54.77"
+  version "1.54.78"
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/eth-cscs/manta/releases/download/v1.54.77/manta-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "7173098b0e0cd72ac314df705cc7d96cb3054099bd0d493e4e9795f8baeceab4"
+    url "https://github.com/eth-cscs/manta/releases/download/v1.54.78/manta-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "d6553493b647e4fbe2a141eb0b6b86f351650a4f073ec45a795018dbe6053d7b"
   end
 
   BINARY_ALIASES = {
