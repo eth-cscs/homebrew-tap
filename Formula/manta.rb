@@ -1,13 +1,25 @@
 class Manta < Formula
   desc "Another CLI for ALPS"
   homepage "https://github.com/eth-cscs/manta/blob/main/README.md"
-  version "1.54.78"
+  version "1.54.81"
+  if OS.mac?
+    if Hardware::CPU.arm?
+      url "https://github.com/eth-cscs/manta/releases/download/v1.54.81/manta-aarch64-apple-darwin.tar.xz"
+      sha256 "d4d70f35be0d4f6022ebf60b0dc216ec592a17c3c886fdf6996095f62e9befe7"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/eth-cscs/manta/releases/download/v1.54.81/manta-x86_64-apple-darwin.tar.xz"
+      sha256 "c5562cfbf85fef0c3be87f2e4941e5c524156b0d9dfa80dcbac59187b5448a7c"
+    end
+  end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/eth-cscs/manta/releases/download/v1.54.78/manta-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "d6553493b647e4fbe2a141eb0b6b86f351650a4f073ec45a795018dbe6053d7b"
+    url "https://github.com/eth-cscs/manta/releases/download/v1.54.81/manta-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "260f468a02fec24aca6ddf9b19624f68781bc62f5df0b66bd9ae67f3aad04c4a"
   end
 
   BINARY_ALIASES = {
+    "aarch64-apple-darwin":     {},
+    "x86_64-apple-darwin":      {},
     "x86_64-unknown-linux-gnu": {},
   }.freeze
 
@@ -27,6 +39,8 @@ class Manta < Formula
   end
 
   def install
+    bin.install "manta" if OS.mac? && Hardware::CPU.arm?
+    bin.install "manta" if OS.mac? && Hardware::CPU.intel?
     bin.install "manta" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
