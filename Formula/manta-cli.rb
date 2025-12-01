@@ -1,25 +1,25 @@
 class MantaCli < Formula
   desc "Another CLI for ALPS"
   homepage "https://github.com/eth-cscs/manta/blob/main/README.md"
-  version "1.58.4"
+  version "1.58.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/eth-cscs/manta/releases/download/v1.58.4/manta-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "a55120f07a86f13fa9270d82c65934f86306c0ee938dcba2259edfa636d43d67"
+      url "https://github.com/eth-cscs/manta/releases/download/v1.58.5/manta-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "a1faa75b1d88a2cf66095ef8360a51ef1313662fc9deca47a9e70954166243b3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/eth-cscs/manta/releases/download/v1.58.4/manta-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "528632a1d7ebc7c17ce56bf66155b8c430991f303cf56e40aca1fb6ec7e39d61"
+      url "https://github.com/eth-cscs/manta/releases/download/v1.58.5/manta-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "af5cb23a6fef6f9c31b185d4f434fadf9ef2fe716a2deadab22729140d2f357a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/eth-cscs/manta/releases/download/v1.58.4/manta-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1c632a9e515d41568af1348a58976e32941a95de817ab123c6565845c38cc602"
+      url "https://github.com/eth-cscs/manta/releases/download/v1.58.5/manta-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8a181a53a25449a3c97b4c728de3d35faa4831d6a078514007fb93c1bbc017cb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/eth-cscs/manta/releases/download/v1.58.4/manta-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4a7c0a6199670b4e3307758afbbc7e57e01a589df1efee786b9675fb94bfd9d2"
+      url "https://github.com/eth-cscs/manta/releases/download/v1.58.5/manta-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ec3d95981ecfb7d35fa268fda3fe6652ed1182b9fd295902b6e35178b941496b"
     end
   end
 
