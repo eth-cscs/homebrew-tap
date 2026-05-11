@@ -1,6 +1,6 @@
 class CscsKey < Formula
   desc "CLI tool to manage SSH keys for the Swiss National Supercomputing Centre (CSCS)"
-  homepage "https://github.com/eth-cscs/cscs-key/blob/master/README.md"
+  homepage "https://github.com/eth-cscs/cscs-key"
 
   on_macos do
     on_arm do
